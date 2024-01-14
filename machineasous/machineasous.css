@@ -1,0 +1,277 @@
+html, body {
+
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-image: url("/static/machineasous/salon.png");
+    background-size: cover;  /* Utilisez 'cover' pour remplir complètement l'élément */
+    background-repeat: no-repeat;  /* Évite la répétition de l'image */
+}
+#back-to-lobby {
+    position: absolute;
+    top: 5px; /* Ajustez la distance par rapport au haut selon vos besoins */
+    right: 10px; /* Ajustez la distance par rapport à la droite selon vos besoins */
+    padding: 10px;
+    color: #fff; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+header {
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    border-bottom-left-radius:20% ;
+    border-bottom-right-radius:20% ;
+    background-color: #750c0c;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    height: 70px; /* Ajustez la hauteur du header */
+}
+h1 {
+    font-family: 'Artifakt Element Thin';
+    font-size: 30px;
+    color: #fffefe; 
+    margin-right: 950px;
+}
+#balance {
+    margin-right: 980px; 
+    font-family: 'Courier New';
+    font-size: 25px;
+    color: #ffffff;
+    
+}
+#bet {
+    font-family: 'Courier New';
+    font-size: 25px;
+    color: #ffffff;
+    margin-right: 1000px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    color: #333;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E8DAB2;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: grey;
+    color: #333;
+}
+
+.machine {
+    background-image: url("/static/machineasous/cadremachine.png");
+    background-size: 400px;
+    width: 400px;
+    height: 330px;
+    z-index: 1;
+    position: absolute;
+    top: 130px;
+    left: 570px;
+}
+
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 585px;
+    top: 300px;
+}
+
+.slot-img {
+    width: 100px;
+    height: 120px;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slot-img img {
+    width: 100%;
+}
+
+.slot-img img.animate {
+    animation: slideDown 0.1s ease-in-out infinite;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(5, 5, 249);
+    position: absolute;
+    left: 375px;
+    top: 70px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.levier {
+    background-image: url("/static/machineasous/levier.png");
+    height: 400px;
+    width: 200px;
+    background-repeat: no-repeat;  /* Évite la répétition de l'image */
+    position: absolute;
+    left: 237px;
+    z-index: 6;
+}
+
+.levier.press{
+    background-image: url("/static/machineasous/levierBas.png");
+    position: absolute;
+    top: 5px;
+    z-index: 5;
+
+
+}
+.bet-buttons {
+    position: absolute;
+    top: 450px; /* Ajustez la distance par rapport au bas selon vos besoins */
+    text-align: center;
+    width: 100%;
+    margin-left:-40px ;
+  }
+  
+  .bet-buttons input {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #750c0c; /* Rouge orange */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 50px;
+  }
+  
+  /* Effet de bordure en relief */
+  .bet-buttons input.bet-buttons1,
+  .bet-buttons input.bet-buttons5,
+  .bet-buttons input.bet-buttons10 {
+    border: 2px solid #a63f3f; /* Couleur de la bordure */
+  }
+  
+  /* Effet de bordure enfoncée lors du clic */
+  .bet-buttons input.bet-buttons1:active,
+  .bet-buttons input.bet-buttons5:active,
+  .bet-buttons input.bet-buttons10:active {
+    border: 2px solid #750c0c; /* Couleur de la bordure enfoncée */
+  }
+  
+
+
+.details-box {
+    display: flex;
+    align-items: center;
+}
+
+#btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: absolute;
+    left: 1000px; /* Adjust the left position as needed */
+    top: 100px;
+}
+
+
+#btn:hover {
+    background-color: #750c0c;
+}
+
+#btn:hover ion-icon {
+    animation: upAndDown 0.3s alternate infinite;
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+
+#details {
+    font-weight: bold;
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    left:950px;
+    color: #ffffff;
+    font-family: 'Artifakt Element Thin';
+    background-color: #750c0c;
+    border-radius: 3%;
+
+}
+
+
+@keyframes slideDown {
+    0% {
+        filter: blur(4px);
+        transform: translateY(-100px);
+    }
+    100% {
+        filter: blur(4px);
+        transform: translateY(100px);
+    }
+}
+#credits-container-balance {
+    position: absolute;
+    top: 80px;
+    left: 5px;
+    width: 260px;
+    height: 20px;
+    background-color: #750c0c;
+    padding: 10px;
+    border-radius: 5px;
+}
+#credits-container-bet {
+    position: absolute;
+    top: 134px;
+    left: 5px;
+    width: 260px;
+    height: 20px;
+    background-color: #750c0c;
+    padding: 10px;
+    border-radius: 5px;
+}
+footer{
+    margin-bottom: 500px;
+}
